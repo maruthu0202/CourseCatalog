@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Catalog</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+  }
+
+  header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .courses-container {
+    max-width: 1400px;
+    margin: 30px auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  @media(min-width: 768px) {
+    .courses-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media(min-width: 1200px) {
+    .courses-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .course-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+  }
+
+  .course-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .course-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .course-body {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .course-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .badges {
+    margin-bottom: 10px;
+  }
+
+  .badge {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .course-desc {
+    font-size: 0.95rem;
+    color: #555;
+    flex: 1;
+  }
+
+  .course-footer {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .course-footer button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .btn-enroll {
+    background-color: #28a745;
+    color: white;
+  }
+
+  .btn-enroll:hover {
+    background-color: #218838;
+  }
+
+  .btn-details {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .btn-details:hover {
+    background-color: #0069d9;
+  }
+
+  footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+  }
+</style>
+</head>
+<body>
+
+<header>Course Catalog</header>
+
+<section class="courses-container">
+
+  <!-- Original 4 courses -->
+  <div class="course-card">
+    <img src="python.png" alt="Python">
+    <div class="course-body">
+      <div class="course-title">Python Basics</div>
+      <div class="badges">
+        <span class="badge">Beginner</span>
+        <span class="badge">Programming</span>
+      </div>
+      <div class="course-desc">Learn the fundamentals of Python programming.</div>
+      <div class="course-footer">
+        <button class="btn-enroll">Enroll</button>
+        <button class="btn-details">Details</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <img src="java.png" alt="Java">
+    <div class="course-body">
+      <div class="course-title">Java Fundamentals</div>
+      <div class="badges">
+        <span class="badge">Beginner</span>
+        <span class="badge">OOP</span>
+      </div>
+      <div class="course-desc">Start coding with Java and understand OOP concepts.</div>
+      <div class="course-footer">
+        <button class="btn-enroll">Enroll</button>
+        <button class="btn-details">Details</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <img src="js.png" alt="JavaScript">
+    <div class="course-body">
+      <div class="course-title">JavaScript Basics</div>
+      <div class="badges">
+        <span class="badge">Beginner</span>
+        <span class="badge">Web</span>
+      </div>
+      <div class="course-desc">Learn JavaScript to make interactive web pages.</div>
+      <div class="course-footer">
+        <button class="btn-enroll">Enroll</button>
+        <button class="btn-details">Details</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <img src="programmer.png" alt="C++">
+    <div class="course-body">
+      <div class="course-title">C++ Basics</div>
+      <div class="badges">
+        <span class="badge">Beginner</span>
+        <span class="badge">Programming</span>
+      </div>
+      <div class="course-desc">Start learning C++ programming and basic concepts.</div>
+      <div class="course-footer">
+        <button class="btn-enroll">Enroll</button>
+        <button class="btn-details">Details</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 Additional Courses -->
+  <div class="course-card">
+    <img src="html.png" alt="HTML">
+    <div class="course-body">
+      <div class="course-title">HTML Basics</div>
+      <div class="badges">
+        <span class="badge">Beginner</span>
+        <span class="badge">Web</span>
+      </div>
+      <div class="course-desc">Learn to structure web pages using HTML.</div>
+      <div class="course-footer">
+        <button class="btn-enroll">Enroll</button>
+        <button class="btn-details">Details</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <img src="css-file.png" alt="CSS">
+    <div class="course-body">
+      <div class="course-title">CSS Basics</div>
+      <div class="badges">
+        <span class="badge">Beginner</span>
+        <span class="badge">Web</span>
+      </div>
+      <div class="course-desc">Style web pages using CSS and learn layout techniques.</div>
+      <div class="course-footer">
+        <button class="btn-enroll">Enroll</button>
+        <button class="btn-details">Details</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <img src="sql.png" alt="SQL">
+    <div class="course-body">
+      <div class="course-title">SQL Basics</div>
+      <div class="badges">
+        <span class="badge">Beginner</span>
+        <span class="badge">Database</span>
+      </div>
+      <div class="course-desc">Learn to store, retrieve, and manage data using SQL.</div>
+      <div class="course-footer">
+        <button class="btn-enroll">Enroll</button>
+        <button class="btn-details">Details</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <img src="php.png" alt="PHP">
+    <div class="course-body">
+      <div class="course-title">PHP Basics</div>
+      <div class="badges">
+        <span class="badge">Beginner</span>
+        <span class="badge">Web</span>
+      </div>
+      <div class="course-desc">Learn server-side programming using PHP.</div>
+      <div class="course-footer">
+        <button class="btn-enroll">Enroll</button>
+        <button class="btn-details">Details</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <img src="ruby.png" alt="Ruby">
+    <div class="course-body">
+      <div class="course-title">Ruby Basics</div>
+      <div class="badges">
+        <span class="badge">Beginner</span>
+        <span class="badge">OOP</span>
+      </div>
+      <div class="course-desc">Learn Ruby programming and object-oriented concepts.</div>
+      <div class="course-footer">
+        <button class="btn-enroll">Enroll</button>
+        <button class="btn-details">Details</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <img src="program.png" alt="Swift">
+    <div class="course-body">
+      <div class="course-title">Swift Basics</div>
+      <div class="badges">
+        <span class="badge">Beginner</span>
+        <span class="badge">iOS</span>
+      </div>
+      <div class="course-desc">Learn Swift programming for iOS app development.</div>
+      <div class="course-footer">
+        <button class="btn-enroll">Enroll</button>
+        <button class="btn-details">Details</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <img src="https://via.placeholder.com/300x180?text=Kotlin" alt="Kotlin">
+    <div class="course-body">
+      <div class="course-title">Kotlin Basics</div>
+      <div class="badges">
+        <span class="badge">Beginner</span>
+        <span class="badge">Android</span>
+      </div>
+      <div class="course-desc">Learn Kotlin programming for Android app development.</div>
+      <div class="course-footer">
+        <button class="btn-enroll">Enroll</button>
+        <button class="btn-details">Details</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer>&copy; 2025 Student Learning Platform</footer>
+
+</body>
+</html>
